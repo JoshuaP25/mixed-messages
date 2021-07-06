@@ -6,18 +6,20 @@ let jokes = {
     'La-Kesha layaw, La-Kesha layaw jeproks'] 
 };
 
+//Return a random number
 function generateRandomNum(num) {
-    let randNum = Math.floor(Math.random() * num);
+    const randNum = Math.floor(Math.random() * num);
     return randNum;
 }
 
+//Format of knockx2 joke
 function jokeFormat(question, answer) {
     return `Knock knock \nWho's there? \n${question} \n${question} who? \n${answer}`;
 }
 
+//Create a random knockx2 joke
 function generateJoke() {
     const joke = [];
-    
     let randIndex = generateRandomNum(jokes['questionKnock'].length);
     const jokeQA = jokes['questionKnock'][randIndex];
     const jokeAns = jokes['answerKnock'][randIndex];
