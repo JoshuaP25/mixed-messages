@@ -1,9 +1,10 @@
 let jokes = {
-    questionKnock: ['Nanay ni wally', 'Cabalen', 'Maling', 'Kesha'],
+    questionKnock: ['Nanay ni wally', 'Cabalen', 'Maling', 'Kesha', 'Saging bananacue'],
     answerKnock: ['Nanay ni wally na ko sa forever',
     'Cabalen bilinan ng lola wag ng uminom ng serbesa',
     'Start twerking like maling',
-    'La-Kesha layaw, La-Kesha layaw jeproks'] 
+    'La-Kesha layaw, La-Kesha layaw jeproks',
+    'Akala ko ikaw ay saging, bananacue sa aking paningin'] 
 };
 
 //Return a random number
@@ -29,4 +30,3 @@ function generateJoke() {
 }
 
 console.log(generateJoke());
-// console.log(generateRandomNum(5));
