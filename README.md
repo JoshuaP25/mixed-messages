@@ -1,4 +1,4 @@
-# Filipino Knock Knock Jokes Generator
+# Filipino/English Knock Knock Jokes Generator
 
 ## Table of contents
 
@@ -25,3 +25,7 @@ To run the program install **node.js** and **git bash**.
 ## Other
 
 > Credit to the owner of the jokes.
+
+## Status
+
+**Note:** The program has only 7 knock jokes. Their are 5 jokes in Filipino and 2 in English and need to add more.
