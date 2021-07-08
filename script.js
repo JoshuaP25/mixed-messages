@@ -1,15 +1,31 @@
 let jokes = {
     filipino: {
-        questionKnockFil: ['Nanay ni wally', 'Cabalen', 'Maling', 'Kesha', 'Saging bananacue'],
-        answerKnockFil: ['Nanay ni wally na ko sa forever',
+        questionKnockFil: [
+        'Nanay ni wally',
+        'Cabalen', 
+        'Maling', 
+        'Kesha', 
+        'Saging bananacue'
+        ],
+
+        answerKnockFil: [
+        'Nanay ni wally na ko sa forever',
         'Cabalen bilinan ng lola wag ng uminom ng serbesa',
         'Start twerking like maling',
         'La-Kesha layaw, La-Kesha layaw jeproks',
-        'Akala ko ikaw ay saging, bananacue sa aking paningin'] 
+        'Akala ko ikaw ay saging, bananacue sa aking paningin'
+        ] 
     },
     english: {
-        questionKnockEng: ['Tank', 'Hawaii'],
-        answerKnockEng: ['You\'re Welcome', 'I\'m good. Hawaii you?']
+        questionKnockEng: [
+        'Tank', 
+        'Hawaii'
+        ],
+        
+        answerKnockEng: [
+        'You\'re Welcome', 
+        'I\'m good. Hawaii you?'
+        ]
     }
     
 };
@@ -50,4 +66,8 @@ function generateJoke() {
     return joke.join();
 }
 
-console.log(generateJoke());
+function executeProgram() {
+    console.log(generateJoke());
+}
+
+executeProgram();
