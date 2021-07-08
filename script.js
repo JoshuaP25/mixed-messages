@@ -1,10 +1,17 @@
 let jokes = {
-    questionKnock: ['Nanay ni wally', 'Cabalen', 'Maling', 'Kesha', 'Saging bananacue'],
-    answerKnock: ['Nanay ni wally na ko sa forever',
-    'Cabalen bilinan ng lola wag ng uminom ng serbesa',
-    'Start twerking like maling',
-    'La-Kesha layaw, La-Kesha layaw jeproks',
-    'Akala ko ikaw ay saging, bananacue sa aking paningin'] 
+    filipino: {
+        questionKnockFil: ['Nanay ni wally', 'Cabalen', 'Maling', 'Kesha', 'Saging bananacue'],
+        answerKnockFil: ['Nanay ni wally na ko sa forever',
+        'Cabalen bilinan ng lola wag ng uminom ng serbesa',
+        'Start twerking like maling',
+        'La-Kesha layaw, La-Kesha layaw jeproks',
+        'Akala ko ikaw ay saging, bananacue sa aking paningin'] 
+    },
+    english: {
+        questionKnockEng: ['Tank', 'Hawaii'],
+        answerKnockEng: ['You\'re Welcome', 'I\'m good. Hawaii you?']
+    }
+    
 };
 
 //Return a random number
@@ -21,11 +28,26 @@ function jokeFormat(question, answer) {
 //Create a random knockx2 joke
 function generateJoke() {
     const joke = [];
-    let randIndex = generateRandomNum(jokes['questionKnock'].length);
-    const jokeQA = jokes['questionKnock'][randIndex];
-    const jokeAns = jokes['answerKnock'][randIndex];
-    
-    joke.push(jokeFormat(jokeQA, jokeAns));
+    let randIndex;
+    let jokeQA;
+    let jokeAns;
+
+    let mykey = Object.keys(jokes).length;
+    const lang = generateRandomNum(mykey);
+    console.log(lang);
+
+    if(lang === 0) {
+        randIndex = generateRandomNum(jokes['filipino']['questionKnockFil'].length);
+        jokeQA = jokes['filipino']['questionKnockFil'][randIndex];
+        jokeAns = jokes['filipino']['answerKnockFil'][randIndex];
+        joke.push(jokeFormat(jokeQA, jokeAns));
+    }
+    else if(lang === 1) {
+        randIndex = generateRandomNum(jokes['english']['questionKnockEng'].length);
+        jokeQA = jokes['english']['questionKnockEng'][randIndex];
+        jokeAns = jokes['english']['answerKnockEng'][randIndex];
+        joke.push(jokeFormat(jokeQA, jokeAns));
+    }
     return joke.join();
 }
 
