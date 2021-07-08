@@ -34,7 +34,6 @@ function generateJoke() {
 
     let mykey = Object.keys(jokes).length;
     const lang = generateRandomNum(mykey);
-    console.log(lang);
 
     if(lang === 0) {
         randIndex = generateRandomNum(jokes['filipino']['questionKnockFil'].length);
